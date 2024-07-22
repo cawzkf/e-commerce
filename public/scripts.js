@@ -24,13 +24,15 @@ products.forEach(product =>{
             notificationElement.textContent = `${product.name} adicionado ao carrinho com sucesso!`;
             
             notificationContainer.appendChild(notificationElement);
+            
+            setTimeout(() => {
+                notificationElement.classList.remove('show');
+                notificationContainer.removeChild(notificationElement);
+            }, 3000);
+    
     });
 
-        setTimeout(() => {
-            notificationElement.classList.remove('show');
-            notificationContainer.removeChild(notificationElement);
-        }, 3000);
-
+        
     productDiv.addEventListener('click', () => {
         console.log(`Você clicou em ${product.name}`);
     });
