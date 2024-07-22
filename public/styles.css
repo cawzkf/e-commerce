@@ -1,22 +1,67 @@
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    padding: 10px;
+    margin: 50px;
     text-align: center;
+    background-color: white;
 }
 
 #products {
-    display: flex;
+    display:ruby;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .product {
-    border: 1px solid #add;
+    border-radius: 4.5pt;
+    border: 5px double black;
     padding: 10px;
-    margin: 10px;
     width: 200px;
+    margin: 15px;
+    background-color:rgb(255, 244, 250);
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    position: relative;
+    background-color: #4caf50;
+    color: white;
+    padding: 8px;
+    width: 180px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.product:hover{
+    width: 210px;
+}
+
+button{
+    border-radius: 4.5pt;
+    border: 2px double black;
+    padding: 10px;
+    margin-top: 15pt;
+    background-color: white;
+    color: black;
+}
 .product img {
+    border-radius: 2pt;
     max-width: 100%;
 }
